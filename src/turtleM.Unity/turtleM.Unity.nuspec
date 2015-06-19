@@ -13,6 +13,6 @@
     <description>$description$</description>
     <releaseNotes>Initial Release</releaseNotes>
     <copyright>Copyright 2015</copyright>
-    <tags>Mediator</tags>
+    <tags>Unity Mediator</tags>
   </metadata>
 </package>
