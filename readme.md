@@ -1,6 +1,6 @@
 # turtleM
 
-turtleM is a micro library that bootstrap's the mediator pattern[1] in your .Net projects.
+turtleM is a micro library that bootstrap's the [mediator pattern] in your .Net projects.
 
 ### What is the mediator pattern?
 If you are unfamiliary with the mediator pattern and why you might want to see this [blog post]. It provides a good example on how you can de-clutter your controller, seperate your concerns and create cleaner, more maintanable code.
@@ -8,9 +8,10 @@ If you are unfamiliary with the mediator pattern and why you might want to see t
 TLDR; It is like automapper for the logic of your application, without the downsides.
 
 Here are three major advantages to using mediators:
+
 1. Streamline your dependencies (and thereby decouple them)
-2. Promotes single responsibility 
-3. Enable application composition
+1. Promotes single responsibility 
+1. Enable application composition
 
 ### Why turtleM?
 turtleM (turtle mediator) was created to reduce boilerplate and maximize flexibility. It is also designed to be easy to grok, through it's explict interfaces and methods.
@@ -32,7 +33,7 @@ TODO
 ### License
 MIT
 
-[1]:https://en.wikipedia.org/?title=Mediator_pattern
+[mediator pattern]:https://en.wikipedia.org/?title=Mediator_pattern
 [blog post]:https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/
 [core library]:https://www.nuget.org/packages/turtleM/
 [Unity]:https://www.nuget.org/packages/turtleM.Unity/
