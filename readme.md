@@ -1,6 +1,6 @@
 # turtleM
 
-turtleM is a micro library that bootstrap's the [mediator pattern] in your .Net projects.
+turtleM (turtle mediator) is a micro library that bootstrap's the [mediator pattern] in your .Net projects.
 
 ### What is the mediator pattern?
 If you are unfamiliary with the mediator pattern and why you might want to see this [blog post]. 
@@ -15,14 +15,12 @@ Here are three major advantages to using mediators:
 1. Enable application composition
 
 ### Why turtleM?
-turtleM (turtle mediator) was created to reduce boilerplate and maximize flexibility. It is also designed to be easy to grok, through it's explict interfaces and methods. 
-
-turtleM supports the following out of the box:
+turtleM was created to reduce boilerplate and maximize flexibility and supports the following out of the box:
 
 1. Async\Await
 1. Any object can be used for request and response objects (no inheritance or interface tagging required)
-1. Handler chaining (more than one response can be returned for any request)
-1. Named mediators (usefull if you have multiple handlers with the same signature)
+1. Handler chaining (more than one response type can be returned for any request)
+1. Named mediators (useful if you have multiple handlers with the same signature)
 
 
 ### Installation
@@ -40,12 +38,12 @@ Currently Supported IoC Packages include:
 ### Usage
 
 
-> Setup
+> Setup (Unity)
 
 ```csharp
 
 //IoC
-var container = new UnityContainer(); // Unity shown here, feel free to use an IoC library of your choice
+var container = new UnityContainer();
 
 //Register componenets required by turtleM
 container.RegisterType<IDependencyInjector, UnityDependencyInjector>();
