@@ -5,14 +5,14 @@ turtleM (turtle mediator) is a micro library that bootstrap's the [mediator patt
 If you are unfamiliary with the mediator pattern and why you might want to see this [blog post]. 
 It provides a good example on how you can de-clutter your controller, seperate your concerns and create cleaner, more maintanable code.
 
-Here are three major advantages to using mediators:
+***Here are three major advantages to using mediators:***
 
 1. Streamline your dependencies (and thereby decouple them)
 1. Promote single responsibility 
 1. Enable application composition
 
 ### Why turtleM?
-turtleM was created to reduce boilerplate and maximize flexibility and supports the following out of the box:
+turtleM was created to reduce boilerplate, maximize flexibility and support the following out of the box:
 
 1. Async\Await
 1. Any object can be used for request and response objects (no inheritance or interface tagging required)
@@ -38,6 +38,10 @@ Currently Supported IoC Packages include:
 > Setup (Unity)
 
 ```csharp
+using Microsoft.Practices.Unity;
+using turtleM;
+using turtleM.Unity;
+
 
 //IoC
 var container = new UnityContainer();
@@ -54,6 +58,7 @@ container.RegisterType<IRequestHandler<Ping, Pong>, PingPongHandler>();
 > Runtime
 
 ```csharp
+using turtleM;
 
 public class Ping { }
  
