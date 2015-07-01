@@ -22,11 +22,26 @@ namespace turtleM
             return handler.Handle(request);
         }
 
+        public TResult Get<TResult>()
+        {
+            var handler = _injector.Get<IHandler<TResult>>();
+
+            return handler.Handle();
+        }
+
+
         public TResult Get<TRequest, TResult>(TRequest request, string name)
         {
             var handler = _injector.Get<IRequestHandler<TRequest, TResult>>(name);
 
             return handler.Handle(request);
+        }
+
+        public TResult Get<TResult>(string name)
+        {
+            var handler = _injector.Get<IHandler<TResult>>(name);
+
+            return handler.Handle();
         }
 
         public async Task<TResult> GetAsync<TRequest, TResult>(TRequest request)
@@ -36,11 +51,25 @@ namespace turtleM
             return await handler.HandleAsync(request);
         }
 
+        public async Task<TResult> GetAsync<TResult>()
+        {
+            var handler = _injector.Get<IAsyncHandler<TResult>>();
+
+            return await handler.HandleAsync();
+        }
+
         public async Task<TResult> GetAsync<TRequest, TResult>(TRequest request, string name)
         {
             var handler = _injector.Get<IAsyncRequestHandler<TRequest, TResult>>(name);
 
             return await handler.HandleAsync(request);
+        }
+
+        public async Task<TResult> GetAsync<TResult>(string name)
+        {
+            var handler = _injector.Get<IAsyncHandler<TResult>>(name);
+
+            return await handler.HandleAsync();
         }
     }
 }

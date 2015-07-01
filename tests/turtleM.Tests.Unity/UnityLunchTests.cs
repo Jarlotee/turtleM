@@ -27,8 +27,8 @@ namespace turtleM.Tests.Unity
             _container.RegisterType<IMediator, Mediator>();
 
             // Register test handlers
-            _container.RegisterType<IAsyncRequestHandler<Ingredients, Entree>, IngredientsEntreeWrapHandler>("wrap");
-            _container.RegisterType<IAsyncRequestHandler<Ingredients, Entree>, IngredientsEntreeSandwichHandler>("sandwich");
+            _container.RegisterType<IAsyncRequestHandler<Ingredients, Entree>, AsyncIngredientsEntreeWrapHandler>("wrap");
+            _container.RegisterType<IAsyncRequestHandler<Ingredients, Entree>, AsyncIngredientsEntreeSandwichHandler>("sandwich");
 
             // Handle initial resolve
             _mediator = _container.Resolve<IMediator>();

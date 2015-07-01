@@ -27,8 +27,8 @@ namespace turtleM.Tests.Ninject
             _kernal.Bind<IMediator>().To<Mediator>();
 
             // Register test handlers
-            _kernal.Bind<IAsyncRequestHandler<Ingredients, Entree>>().To<IngredientsEntreeWrapHandler>().Named("wrap");
-            _kernal.Bind<IAsyncRequestHandler<Ingredients, Entree>>().To<IngredientsEntreeSandwichHandler>().Named("sandwich");
+            _kernal.Bind<IAsyncRequestHandler<Ingredients, Entree>>().To<AsyncIngredientsEntreeWrapHandler>().Named("wrap");
+            _kernal.Bind<IAsyncRequestHandler<Ingredients, Entree>>().To<AsyncIngredientsEntreeSandwichHandler>().Named("sandwich");
 
             // Handle initial resolve
             _mediator = _kernal.Get<IMediator>();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace turtleM.Tests.Lunch
 {
-    public class IngredientsEntreeSandwichHandler : IAsyncRequestHandler<Ingredients, Entree>
+    public class AsyncIngredientsEntreeSandwichHandler : IAsyncRequestHandler<Ingredients, Entree>
     {
         public async Task<Entree> HandleAsync(Ingredients request)
         {

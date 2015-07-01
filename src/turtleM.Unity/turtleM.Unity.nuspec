@@ -11,7 +11,7 @@
     <iconUrl>https://raw.githubusercontent.com/Jarlotee/turtleM/master/docs/img/Animals-Turtle-icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Initial Release</releaseNotes>
+    <releaseNotes>Add non-request handler support</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>Unity Mediator</tags>
   </metadata>
